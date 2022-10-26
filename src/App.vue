@@ -48,21 +48,27 @@ main {
   font-size: 4rem;
 }
 
-#increment-btn,
-#decrement-btn {
+button {
   width: 7rem;
   height: 2.25rem;
   border-radius: 50px;
   font-size: 1.25rem;
   text-align: center;
   margin: 15px;
+  border: none;
+  box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.8);
+  transition: box-shadow 0.15s ease-in-out;
+}
+
+button:active {
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
 }
 
 #increment-btn {
-  background-color: #a8e890;
+  background-color: #00abb3;
 }
 
 #decrement-btn {
-  background-color: #dd5353;
+  background-color: #f96666;
 }
 </style>
