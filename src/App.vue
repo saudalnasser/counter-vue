@@ -1,3 +1,12 @@
+<script setup lang="ts">
+import { ref } from 'vue';
+
+const counter = ref(0);
+
+const increment = () => counter.value++;
+const decrement = () => counter.value--;
+</script>
+
 <template>
   <main>
     <header>
@@ -6,9 +15,9 @@
     <section>
       <article>
         <h2 id="counter-header">The current count is...</h2>
-        <h2 id="counter">0</h2>
-        <button id="decrement-btn">-</button>
-        <button id="increment-btn">+</button>
+        <h2 id="counter">{{ counter }}</h2>
+        <button id="decrement-btn" @click="decrement">-</button>
+        <button id="increment-btn" @click="increment">+</button>
       </article>
     </section>
   </main>
